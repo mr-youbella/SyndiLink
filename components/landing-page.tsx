@@ -21,10 +21,7 @@ export function LandingPage() {
 	}
 
 	return (
-		<div
-			className="overflow-clip"
-			id="home"
-		>
+		<div id="home">
 			<Header openDialog={openDialog} />
 			<main>
 				<Hero openDialog={openDialog} />
