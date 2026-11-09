@@ -8,7 +8,7 @@ export function Hero({ openDialog }: { openDialog: OpenDialog }) {
 
 	return (
 		<section
-			className={`${container} relative grid items-center gap-8 py-10 md:min-h-132 md:grid-cols-2 md:gap-6 xl:min-h-144 xl:gap-8 xl:py-12`}
+			className={`${container} grid items-center gap-8 py-10 md:min-h-132 md:grid-cols-2 md:gap-6 xl:min-h-144 xl:gap-8 xl:py-12`}
 			aria-labelledby="hero-heading"
 		>
 			<div className="relative z-10 md:py-4">
