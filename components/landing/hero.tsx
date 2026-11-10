@@ -81,7 +81,7 @@ export function Hero({ openDialog }: { openDialog: OpenDialog }) {
 			<div className="relative ms-3 min-w-0 md:ms-0 md:ps-4">
 				<div className="relative h-92 overflow-hidden rounded-2xl rounded-ss-[7rem] bg-[#dce5dd] md:h-104 xl:h-118 xl:rounded-ss-[12rem]">
 					<Image
-						src="/images/residential-hero.webp"
+						src="/images/residential-hero.jpg"
 						alt={t.photoAlt}
 						fill
 						sizes="(max-width: 767px) 100vw, 50vw"
