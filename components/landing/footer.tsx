@@ -13,7 +13,7 @@ export function ClosingCta({ openDialog }: { openDialog: OpenDialog }) {
 			aria-labelledby="closing-heading"
 		>
 			<div className="relative flex flex-col items-start justify-between gap-6 overflow-hidden rounded-2xl border border-[#e3e7df] bg-[#edf2e9] p-6 md:flex-row md:items-center md:gap-10 md:p-10 xl:p-12">
-				<div className="relative z-10">
+				<div className="z-10">
 					<span className={eyebrow}>
 						<Sparkles
 							className="size-4"
@@ -31,7 +31,7 @@ export function ClosingCta({ openDialog }: { openDialog: OpenDialog }) {
 				</div>
 				<button
 					type="button"
-					className="relative z-10 flex min-h-12 shrink-0 cursor-pointer items-center justify-center gap-3 rounded-xl border border-transparent bg-[#183d35] px-5 py-3 text-xs font-bold text-white shadow-sm transition-colors hover:bg-[#0f302a] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] motion-reduce:transition-none"
+					className="z-10 flex min-h-12 shrink-0 cursor-pointer items-center justify-center gap-3 rounded-xl border border-transparent bg-[#183d35] px-5 py-3 text-xs font-bold text-white shadow-sm transition-colors hover:bg-[#0f302a] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] motion-reduce:transition-none"
 					onClick={() => openDialog("start")}
 				>
 					{t.start}
@@ -66,7 +66,7 @@ export function Footer() {
 				>
 					{sections.map((id, index) => (
 						<a
-							className="hover:text-[#245f51] hover:underline hover:underline-offset-4 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65]"
+							className="hover:text-[#245f51] hover:underline hover:underline-offset-4 rounded-md focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65]"
 							href={`#${id}`}
 							key={id}
 						>
