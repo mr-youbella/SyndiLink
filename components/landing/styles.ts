@@ -3,5 +3,3 @@ export const eyebrow = "inline-flex items-center gap-2 text-xs font-extrabold tr
 export const heading = "text-3xl leading-snug font-extrabold tracking-tight lg:text-4xl rtl:tracking-normal";
 
 export const sections = ["features", "how-it-works", "community", "faq"];
-export type DialogMode = "start" | "signin";
-export type OpenDialog = (mode: DialogMode) => void;

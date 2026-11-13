@@ -1,11 +1,11 @@
 import { ArrowRight, Building2, Check, HeartHandshake, House, MessageCircle, ShieldCheck, Users } from "lucide-react";
 import { useState, type KeyboardEvent } from "react";
 import { useLanguage } from "@/app/lib/langs/language-provider";
-import { container, eyebrow, heading, type OpenDialog } from "./styles";
+import { container, eyebrow, heading } from "./styles";
 
 const roleIcons = [Building2, House, Users];
 
-export function Community({ openDialog }: { openDialog: OpenDialog }) {
+export function Community() {
 	const { t, lang } = useLanguage();
 	const [activeRole, setActiveRole] = useState(0);
 
@@ -138,7 +138,6 @@ export function Community({ openDialog }: { openDialog: OpenDialog }) {
 								<button
 									type="button"
 									className="inline-flex cursor-pointer items-center gap-3 py-1 text-sm font-extrabold text-[#245f51] hover:underline hover:underline-offset-4 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65]"
-									onClick={() => openDialog("start")}
 								>
 									{t.start}
 									<ArrowRight

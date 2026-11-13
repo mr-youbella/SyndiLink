@@ -3,17 +3,12 @@ import { useState } from "react";
 import { useLanguage } from "@/app/lib/langs/language-provider";
 import type { Lang } from "@/app/lib/langs/messages";
 import { Brand } from "@/components/ui/brand";
-import { container, sections, type OpenDialog } from "./styles";
+import { container, sections } from "./styles";
 
-export function Header({ openDialog }: { openDialog: OpenDialog }) {
+export function Header() {
 	const { t, lang, setLang } = useLanguage();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState("");
-
-	function handleOpenDialog(mode: "start" | "signin") {
-		setMenuOpen(false);
-		openDialog(mode);
-	}
 
 	return (
 		<header className="sticky top-0 z-30 border-b border-[#e3e7df]/70 bg-[#f7f8f4]/95 backdrop-blur-lg">
@@ -59,14 +54,12 @@ export function Header({ openDialog }: { openDialog: OpenDialog }) {
 					<button
 						type="button"
 						className="hidden cursor-pointer py-2 text-xs font-bold whitespace-nowrap hover:text-[#245f51] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] md:block"
-						onClick={() => handleOpenDialog("signin")}
 					>
 						{t.signIn}
 					</button>
 					<button
 						type="button"
 						className="hidden min-h-12 cursor-pointer items-center justify-center gap-3 rounded-xl border border-transparent bg-[#183d35] px-5 py-3 text-xs font-bold text-white shadow-sm transition-colors hover:bg-[#0f302a] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] motion-reduce:transition-none md:flex"
-						onClick={() => handleOpenDialog("start")}
 					>
 						{t.createAccount}
 						<ArrowRight
@@ -111,14 +104,12 @@ export function Header({ openDialog }: { openDialog: OpenDialog }) {
 						<button
 							type="button"
 							className="flex min-h-12 flex-1 cursor-pointer items-center justify-center rounded-xl border border-[#e3e7df] bg-white px-5 py-3 text-xs font-bold text-[#1f2925] shadow-sm transition-colors hover:bg-[#edf2e9] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] motion-reduce:transition-none"
-							onClick={() => handleOpenDialog("signin")}
 						>
 							{t.signIn}
 						</button>
 						<button
 							type="button"
 							className="flex min-h-12 flex-1 cursor-pointer items-center justify-center rounded-xl border border-transparent bg-[#183d35] px-5 py-3 text-xs font-bold text-white shadow-sm transition-colors hover:bg-[#0f302a] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] motion-reduce:transition-none"
-							onClick={() => handleOpenDialog("start")}
 						>
 							{t.createAccount}
 						</button>

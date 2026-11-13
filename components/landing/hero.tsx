@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { ArrowRight, Building2, CheckCircle2, House, Leaf, Play } from "lucide-react";
 import { useLanguage } from "@/app/lib/langs/language-provider";
-import { container, type OpenDialog } from "./styles";
+import { container } from "./styles";
 
-export function Hero({ openDialog }: { openDialog: OpenDialog }) {
+export function Hero() {
 	const { t } = useLanguage();
 
 	return (
@@ -41,7 +41,6 @@ export function Hero({ openDialog }: { openDialog: OpenDialog }) {
 					<button
 						type="button"
 						className="flex min-h-12 cursor-pointer items-center justify-center gap-3 rounded-xl border border-transparent bg-[#183d35] px-5 py-3 text-xs font-bold text-white shadow-sm transition-colors hover:bg-[#0f302a] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] motion-reduce:transition-none"
-						onClick={() => openDialog("start")}
 					>
 						{t.start}
 						<ArrowRight

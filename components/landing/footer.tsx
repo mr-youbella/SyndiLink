@@ -1,9 +1,9 @@
 import { ArrowRight, Building2, Leaf, Sparkles } from "lucide-react";
 import { useLanguage } from "@/app/lib/langs/language-provider";
 import { Brand } from "@/components/ui/brand";
-import { container, eyebrow, heading, sections, type OpenDialog } from "./styles";
+import { container, eyebrow, heading, sections } from "./styles";
 
-export function ClosingCta({ openDialog }: { openDialog: OpenDialog }) {
+export function ClosingCta() {
 	const { t } = useLanguage();
 
 	return (
@@ -32,7 +32,6 @@ export function ClosingCta({ openDialog }: { openDialog: OpenDialog }) {
 				<button
 					type="button"
 					className="z-10 flex min-h-12 shrink-0 cursor-pointer items-center justify-center gap-3 rounded-xl border border-transparent bg-[#183d35] px-5 py-3 text-xs font-bold text-white shadow-sm transition-colors hover:bg-[#0f302a] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] motion-reduce:transition-none"
-					onClick={() => openDialog("start")}
 				>
 					{t.start}
 					<ArrowRight
