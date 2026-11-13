@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			dir="ltr"
 			className="scroll-pt-26 scroll-smooth motion-reduce:scroll-auto"
 		>
-			<body className={`${manrope.variable} ${arabic.variable} bg-[#f7f8f4] font-[family-name:var(--font-manrope),var(--font-arabic),sans-serif] text-[#1f2925] antialiased selection:bg-[#dce5dd] selection:text-[#183d35]`}>
+			<body className={`${manrope.variable} ${arabic.variable} bg-[#f7f8f4] font-[family-name:var(--font-manrope),var(--font-arabic),sans-serif] text-[#1f2925] selection:bg-[#dce5dd] selection:text-[#183d35]`}>
 				<LanguageProvider>{children}</LanguageProvider>
 			</body>
 		</html>
