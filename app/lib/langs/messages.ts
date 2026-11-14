@@ -121,16 +121,6 @@ export const messages = {
 		footerText: "Your building. Better connected.",
 		footerRights: "All rights reserved.",
 		footerNote: "Designed for the places we call home.",
-		// Account preview dialog
-		modalTag: "WELCOME TO SYNDILINK",
-		modalTitle: "Let's bring your building together.",
-		modalText: "Account registration is coming soon. Choose your path to see how SyndiLink will fit your community.",
-		modalSignInTitle: "Your community will be right here.",
-		modalSignInText: "Sign-in will be available when account access opens. In the meantime, get to know how SyndiLink can bring your building together.",
-		modalRoles: ["I manage a building", "I own or live in an apartment"],
-		modalRoleText: ["Create your building, add apartments, and review requests from your community.", "Complete your profile, find your building, and request approval from your syndic."],
-		modalNext: "Explore how it works",
-		sealLabel: "Better together",
 	},
 	fr: {
 		// Shared navigation
@@ -254,16 +244,6 @@ export const messages = {
 		footerText: "Votre immeuble. Mieux connecté.",
 		footerRights: "Tous droits réservés.",
 		footerNote: "Pensé pour les lieux où l'on se sent chez soi.",
-		// Account preview dialog
-		modalTag: "BIENVENUE SUR SYNDILINK",
-		modalTitle: "Rapprochons votre communauté.",
-		modalText: "La création de compte sera bientôt disponible. Choisissez votre profil pour découvrir votre parcours.",
-		modalSignInTitle: "Votre communauté vous attendra ici.",
-		modalSignInText: "La connexion sera disponible lors de l'ouverture des comptes. Découvrez en attendant comment SyndiLink peut rapprocher votre immeuble.",
-		modalRoles: ["Je gère un immeuble", "Je suis propriétaire ou résident"],
-		modalRoleText: ["Créez votre immeuble, ajoutez les appartements et examinez les demandes d'adhésion.", "Complétez votre profil, trouvez votre immeuble et demandez l'accord de votre syndic."],
-		modalNext: "Découvrir les étapes",
-		sealLabel: "Mieux ensemble",
 	},
 	ar: {
 		// Shared navigation
@@ -387,16 +367,6 @@ export const messages = {
 		footerText: "بنايتك. مجتمع أكثر ترابطًا.",
 		footerRights: "جميع الحقوق محفوظة.",
 		footerNote: "للمكان الذي نسميه بيتًا.",
-		// Account preview dialog
-		modalTag: "مرحبًا بك في SYNDILINK",
-		modalTitle: "لنقرّب مجتمع بنايتك.",
-		modalText: "سيُتاح إنشاء الحسابات قريبًا. اختر صفتك لتتعرف على رحلتك في المنصة.",
-		modalSignInTitle: "مجتمعك سيكون هنا.",
-		modalSignInText: "سيُتاح تسجيل الدخول عند فتح الحسابات. يمكنك الآن اكتشاف كيف تساعد SyndiLink على تنظيم مجتمع بنايتك.",
-		modalRoles: ["أدير بناية", "أملك شقة أو أسكن فيها"],
-		modalRoleText: ["أنشئ بنايتك وأضف الشقق وراجع طلبات الانضمام من السكان.", "أكمل ملفك الشخصي واعثر على بنايتك وأرسل طلب الموافقة إلى السنديك."],
-		modalNext: "اكتشف الخطوات",
-		sealLabel: "أفضل معًا",
 	},
 };
 
