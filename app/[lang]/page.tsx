@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { isLang, languages, messages } from "@/app/lib/langs/messages";
+import { isLang, messages } from "@/app/lib/langs/messages";
 import { LandingPage } from "@/components/landing-page";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -22,7 +22,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 		metadata.alternates = {
 			canonical: `/${lang}`,
 			languages: {
-				...Object.fromEntries(languages.map((language) => [language, `/${language}`])),
+				en: "/en",
+				fr: "/fr",
+				ar: "/ar",
 				"x-default": "/en",
 			},
 		};
