@@ -14,7 +14,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 	const metadata: Metadata = {
 		title: `SyndiLink — ${copy.title.join(" ")}`,
 		description: copy.intro,
-		applicationName: "SyndiLink",
 	};
 
 	if (siteUrl) {
