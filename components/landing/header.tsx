@@ -1,7 +1,7 @@
 import { ArrowRight, ChevronDown, Globe2, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/app/lib/langs/language-provider";
-import type { Lang } from "@/app/lib/langs/messages";
+import { isLang } from "@/app/lib/langs/messages";
 import { Brand } from "@/components/ui/brand";
 import { container, sections } from "./styles";
 
@@ -40,7 +40,11 @@ export function Header() {
 							className="w-14 cursor-pointer appearance-none bg-transparent py-2 text-xs font-bold focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] md:w-18"
 							aria-label={t.language}
 							value={lang}
-							onChange={(event) => setLang(event.target.value as Lang)}
+							onChange={(event) => {
+								const nextLang = event.target.value;
+								if (isLang(nextLang))
+									setLang(nextLang);
+							}}
 						>
 							<option value="en">English</option>
 							<option value="fr">Français</option>

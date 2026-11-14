@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { createContext, useContext, type ReactNode } from "react";
 import { messages, type Lang, type Messages } from "./messages";
 
 type LanguageContextValue = {
@@ -11,13 +11,15 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-	const [lang, setLang] = useState<Lang>("en");
+export function LanguageProvider({ lang, children }: { lang: Lang; children: ReactNode }) {
+	function setLang(nextLang: Lang) {
+		if (nextLang === lang)
+			return;
 
-	useEffect(() => {
-		document.documentElement.lang = lang;
-		document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-	}, [lang]);
+		const url = new URL(window.location.href);
+		url.pathname = `/${nextLang}`;
+		window.location.assign(url);
+	}
 
 	return <LanguageContext.Provider value={{ lang, setLang, t: messages[lang] }}>{children}</LanguageContext.Provider>;
 }

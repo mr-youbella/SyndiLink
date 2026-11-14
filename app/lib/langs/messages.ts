@@ -17,6 +17,7 @@ export const messages = {
 		photoAlt: "Sunlit contemporary apartments with green balconies and an olive-lined garden",
 		photoLabel: "A place to belong",
 		photoCaption: "A better community starts with a connection.",
+		sealLabel: "Better together",
 		// Landing page: features
 		featuresTag: "EVERYTHING IN ONE PLACE",
 		featuresTitle: "A little less admin. A lot more community.",
@@ -140,6 +141,7 @@ export const messages = {
 		photoAlt: "Immeuble contemporain ensoleillé avec balcons végétalisés et jardin bordé d'oliviers",
 		photoLabel: "Un lieu où l'on se sent chez soi",
 		photoCaption: "Une communauté plus unie commence par un lien.",
+		sealLabel: "Mieux ensemble",
 		// Landing page: features
 		featuresTag: "TOUT AU MÊME ENDROIT",
 		featuresTitle: "Moins de gestion. Plus de vie commune.",
@@ -263,6 +265,7 @@ export const messages = {
 		photoAlt: "بناية سكنية عصرية مضاءة بالشمس، بشرفات خضراء وحديقة تحيط بها أشجار الزيتون",
 		photoLabel: "مكان يجمعنا",
 		photoCaption: "مجتمع أفضل يبدأ بالتواصل.",
+		sealLabel: "أفضل معًا",
 		// Landing page: features
 		featuresTag: "كل ما تحتاجه في مكان واحد",
 		featuresTitle: "إدارة أبسط. مجتمع أقرب.",
@@ -370,5 +373,12 @@ export const messages = {
 	},
 };
 
-export type Lang = keyof typeof messages;
+export const languages = ["en", "fr", "ar"] as const;
+export type Lang = (typeof languages)[number];
 export type Messages = typeof messages.en;
+
+messages satisfies Record<Lang, Messages>;
+
+export function isLang(value: string): value is Lang {
+	return languages.some((lang) => lang === value);
+}
