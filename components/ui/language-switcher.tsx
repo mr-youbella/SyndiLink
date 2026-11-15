@@ -16,6 +16,7 @@ export default function LanguageSwitcher() {
 
 	return (
 		<Select
+			modal={false}
 			value={lang}
 			onValueChange={(value) => {
 				if (value !== null && isLang(value))
@@ -35,6 +36,7 @@ export default function LanguageSwitcher() {
 			</SelectTrigger>
 
 			<SelectContent
+				positionMethod="fixed"
 				align="end"
 				side="bottom"
 				sideOffset={8}

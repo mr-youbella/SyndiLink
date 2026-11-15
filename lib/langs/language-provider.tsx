@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, type ReactNode } from "react";
+import { useRouter } from "next/navigation";
 import { messages, type Lang, type Messages } from "./messages";
 
 type LanguageContextValue = {
@@ -12,13 +13,14 @@ type LanguageContextValue = {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ lang, children }: { lang: Lang; children: ReactNode }) {
+	const router = useRouter();
+
 	function setLang(nextLang: Lang) {
 		if (nextLang === lang)
 			return;
 
-		const url = new URL(window.location.href);
-		url.pathname = `/${nextLang}`;
-		window.location.replace(url);
+		const { search, hash } = window.location;
+		router.replace(`/${nextLang}${search}${hash}`, { scroll: false });
 	}
 
 	return <LanguageContext.Provider value={{ lang, setLang, t: messages[lang] }}>{children}</LanguageContext.Provider>;
