@@ -122,6 +122,9 @@ export const messages = {
 		footerText: "Your building. Better connected.",
 		footerRights: "All rights reserved.",
 		footerNote: "Designed for the places we call home.",
+		privacyPolicy: "Privacy Policy",
+		termsOfService: "Terms of Service",
+		footerLegalNavigation: "Legal information",
 	},
 	fr: {
 		// Shared navigation
@@ -246,6 +249,9 @@ export const messages = {
 		footerText: "Votre immeuble. Mieux connecté.",
 		footerRights: "Tous droits réservés.",
 		footerNote: "Pensé pour les lieux où l'on se sent chez soi.",
+		privacyPolicy: "Politique de confidentialité",
+		termsOfService: "Conditions d'utilisation",
+		footerLegalNavigation: "Informations légales",
 	},
 	ar: {
 		// Shared navigation
@@ -370,6 +376,9 @@ export const messages = {
 		footerText: "بنايتك. مجتمع أكثر ترابطًا.",
 		footerRights: "جميع الحقوق محفوظة.",
 		footerNote: "للمكان الذي نسميه بيتًا.",
+		privacyPolicy: "سياسة الخصوصية",
+		termsOfService: "شروط الاستخدام",
+		footerLegalNavigation: "المعلومات القانونية",
 	},
 };
 

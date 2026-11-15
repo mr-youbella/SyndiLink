@@ -1,7 +1,6 @@
-import { ArrowRight, Building2, Leaf, Sparkles } from "lucide-react";
+import { ArrowRight, Building2, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/langs/language-provider";
-import { Brand } from "@/components/ui/brand";
-import { container, eyebrow, heading, sections } from "./styles";
+import { container, eyebrow, heading } from "./styles";
 
 export function ClosingCta() {
 	const { t } = useLanguage();
@@ -46,46 +45,5 @@ export function ClosingCta() {
 				/>
 			</div>
 		</section>
-	);
-}
-
-export function Footer() {
-	const { t } = useLanguage();
-
-	return (
-		<footer className="border-t border-[#e3e7df]">
-			<div className={`${container} flex flex-col items-start justify-between gap-6 py-8 md:flex-row md:items-center md:gap-8`}>
-				<div>
-					<Brand compact />
-					<p className="mt-3 text-xs text-[#5b6961]">{t.footerText}</p>
-				</div>
-				<nav
-					className="flex flex-wrap gap-4 text-xs font-semibold md:gap-7"
-					aria-label={t.menu}
-				>
-					{sections.map((id, index) => (
-						<a
-							className="hover:text-[#245f51] hover:underline hover:underline-offset-4 rounded-md focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65]"
-							href={`#${id}`}
-							key={id}
-						>
-							{t.nav[index]}
-						</a>
-					))}
-				</nav>
-			</div>
-			<div className={container}>
-				<div className="flex flex-col justify-between gap-3 border-t border-[#e3e7df] py-5 text-xs text-[#5b6961] md:flex-row md:gap-5">
-					<span>© 2026 SyndiLink. {t.footerRights}</span>
-					<span className="flex items-center gap-2">
-						<Leaf
-							className="size-3"
-							aria-hidden="true"
-						/>
-						{t.footerNote}
-					</span>
-				</div>
-			</div>
-		</footer>
 	);
 }
