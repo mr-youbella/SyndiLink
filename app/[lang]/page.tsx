@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { isLang, messages } from "@/app/lib/langs/messages";
+import { isLang, messages } from "@/lib/langs/messages";
 import { LandingPage } from "@/components/landing-page";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {

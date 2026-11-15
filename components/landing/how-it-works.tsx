@@ -1,5 +1,5 @@
 import { ArrowDown, ArrowRight, Building2, HeartHandshake, UserPlus } from "lucide-react";
-import { useLanguage } from "@/app/lib/langs/language-provider";
+import { useLanguage } from "@/lib/langs/language-provider";
 import { container, eyebrow } from "./styles";
 
 const stepIcons = [UserPlus, Building2, HeartHandshake];

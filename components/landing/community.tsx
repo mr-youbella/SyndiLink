@@ -1,6 +1,6 @@
 import { ArrowRight, Building2, Check, HeartHandshake, House, MessageCircle, ShieldCheck, Users } from "lucide-react";
 import { useState, type KeyboardEvent } from "react";
-import { useLanguage } from "@/app/lib/langs/language-provider";
+import { useLanguage } from "@/lib/langs/language-provider";
 import { container, eyebrow, heading } from "./styles";
 
 const roleIcons = [Building2, House, Users];

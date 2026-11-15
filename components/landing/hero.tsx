@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, Building2, CheckCircle2, House, Leaf, Play } from "lucide-react";
-import { useLanguage } from "@/app/lib/langs/language-provider";
+import { useLanguage } from "@/lib/langs/language-provider";
 import { container } from "./styles";
 
 export function Hero() {

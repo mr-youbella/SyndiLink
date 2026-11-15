@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
-import { LanguageProvider } from "@/app/lib/langs/language-provider";
-import { isLang, languages } from "@/app/lib/langs/messages";
+import { LanguageProvider } from "@/lib/langs/language-provider";
+import { isLang, languages } from "@/lib/langs/messages";
 import "../globals.css";
 
 const manrope = localFont({

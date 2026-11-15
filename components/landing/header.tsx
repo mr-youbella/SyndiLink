@@ -1,9 +1,10 @@
 import { ArrowRight, ChevronDown, Globe2, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { useLanguage } from "@/app/lib/langs/language-provider";
-import { isLang } from "@/app/lib/langs/messages";
+import { useLanguage } from "@/lib/langs/language-provider";
+import { isLang } from "@/lib/langs/messages";
 import { Brand } from "@/components/ui/brand";
 import { container, sections } from "./styles";
+import LanguageSwitcher from "../ui/language-switcher";
 
 export function Header() {
 	const { t, lang, setLang } = useLanguage();
@@ -31,30 +32,7 @@ export function Header() {
 					))}
 				</nav>
 				<div className="flex items-center gap-2 md:gap-4 xl:gap-5">
-					<label className="flex items-center gap-1 md:gap-2">
-						<Globe2
-							className="hidden size-4 sm:block"
-							aria-hidden="true"
-						/>
-						<select
-							className="w-14 cursor-pointer appearance-none bg-transparent py-2 text-xs font-bold focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] md:w-18"
-							aria-label={t.language}
-							value={lang}
-							onChange={(event) => {
-								const nextLang = event.target.value;
-								if (isLang(nextLang))
-									setLang(nextLang);
-							}}
-						>
-							<option value="en">English</option>
-							<option value="fr">Français</option>
-							<option value="ar">العربية</option>
-						</select>
-						<ChevronDown
-							className="hidden size-3 sm:block"
-							aria-hidden="true"
-						/>
-					</label>
+						<LanguageSwitcher />
 					<button
 						type="button"
 						className="hidden cursor-pointer py-2 text-xs font-bold whitespace-nowrap hover:text-[#245f51] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] md:block"

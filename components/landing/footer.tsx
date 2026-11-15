@@ -1,5 +1,5 @@
 import { ArrowRight, Building2, Leaf, Sparkles } from "lucide-react";
-import { useLanguage } from "@/app/lib/langs/language-provider";
+import { useLanguage } from "@/lib/langs/language-provider";
 import { Brand } from "@/components/ui/brand";
 import { container, eyebrow, heading, sections } from "./styles";
 

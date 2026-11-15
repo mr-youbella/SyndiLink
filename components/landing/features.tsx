@@ -1,5 +1,5 @@
 import { CalendarDays, ChartNoAxesCombined, Megaphone, MessageCircle, Wallet, Wrench } from "lucide-react";
-import { useLanguage } from "@/app/lib/langs/language-provider";
+import { useLanguage } from "@/lib/langs/language-provider";
 import { container, eyebrow, heading } from "./styles";
 
 const featureIcons = [MessageCircle, Wallet, Wrench, CalendarDays, ChartNoAxesCombined, Megaphone];
