@@ -18,7 +18,7 @@ export function LanguageProvider({ lang, children }: { lang: Lang; children: Rea
 
 		const url = new URL(window.location.href);
 		url.pathname = `/${nextLang}`;
-		window.location.assign(url);
+		window.location.replace(url);
 	}
 
 	return <LanguageContext.Provider value={{ lang, setLang, t: messages[lang] }}>{children}</LanguageContext.Provider>;
