@@ -40,9 +40,9 @@ export default function LanguageSwitcher() {
 				sideOffset={8}
 				alignItemWithTrigger={false}
 			>
-				<SelectItem value="en">🇬🇧 English</SelectItem>
-				<SelectItem value="fr">🇫🇷 Français</SelectItem>
-				<SelectItem value="ar">🇲🇦 العربية</SelectItem>
+				<SelectItem className={lang === "en" ? "bg-[#8bbb9245]" : ""} value="en">🇬🇧 English</SelectItem>
+				<SelectItem className={lang === "fr" ? "bg-[#8bbb9245]" : ""} value="fr">🇫🇷 Français</SelectItem>
+				<SelectItem className={lang === "ar" ? "bg-[#8bbb9245]" : ""} value="ar">🇲🇦 العربية</SelectItem>
 			</SelectContent>
 		</Select>
 	);
