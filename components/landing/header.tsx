@@ -1,13 +1,12 @@
-import { ArrowRight, ChevronDown, Globe2, Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/lib/langs/language-provider";
-import { isLang } from "@/lib/langs/messages";
 import { Brand } from "@/components/ui/brand";
 import { container, sections } from "./styles";
 import LanguageSwitcher from "../ui/language-switcher";
 
 export function Header() {
-	const { t, lang, setLang } = useLanguage();
+	const { t } = useLanguage();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState("");
 
