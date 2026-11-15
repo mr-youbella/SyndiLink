@@ -31,7 +31,7 @@ export function Header() {
 					))}
 				</nav>
 				<div className="flex items-center gap-2 md:gap-4 xl:gap-5">
-						<LanguageSwitcher />
+					<LanguageSwitcher />
 					<button
 						type="button"
 						className="hidden cursor-pointer py-2 text-xs font-bold whitespace-nowrap hover:text-[#245f51] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] md:block"
