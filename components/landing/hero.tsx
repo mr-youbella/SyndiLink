@@ -80,11 +80,12 @@ export function Hero() {
 			<div className="relative ms-3 min-w-0 md:ms-0 md:ps-4">
 				<div className="relative h-92 overflow-hidden rounded-2xl rounded-ss-[7rem] bg-[#dce5dd] md:h-104 xl:h-118 xl:rounded-ss-[12rem]">
 					<Image
-						src="/images/residential-hero.jpg"
+						src="/images/residential-hero.webp"
 						alt={t.photoAlt}
 						fill
 						sizes="(max-width: 767px) 100vw, 50vw"
-						preload
+						loading="eager"
+						fetchPriority="high"
 						className="object-cover"
 					/>
 					<div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-b from-transparent to-[#183d35]/90" />
