@@ -1,13 +1,11 @@
 export const messages = {
 	en: {
-		// Shared navigation
 		nav: ["Features", "How it works", "For your community", "FAQs"],
 		language: "Language",
 		signIn: "Sign in",
 		createAccount: "Create account",
 		menu: "Navigation menu",
 		close: "Close",
-		// Landing page: hero
 		eyebrow: "RESIDENTIAL BUILDING MANAGEMENT",
 		title: ["Your building.", "Better connected."],
 		intro: "Less chasing updates. More living together. One welcoming space for building managers, owners, and residents to keep their community running smoothly.",
@@ -18,7 +16,6 @@ export const messages = {
 		photoLabel: "A place to belong",
 		photoCaption: "A better community starts with a connection.",
 		sealLabel: "Better together",
-		// Landing page: features
 		featuresTag: "EVERYTHING IN ONE PLACE",
 		featuresTitle: "A little less admin. A lot more community.",
 		featuresIntro: "The everyday essentials for a building that works better, together.",
@@ -48,7 +45,6 @@ export const messages = {
 				text: "Keep building announcements organized, accessible, and out of the group-chat scroll.",
 			},
 		],
-		// Landing page: getting started
 		stepsTag: "HOW IT WORKS",
 		stepsTitle: "Your community, connected in three steps.",
 		steps: [
@@ -65,7 +61,6 @@ export const messages = {
 				text: "Share updates, stay organized, and keep everyone in the loop.",
 			},
 		],
-		// Landing page: community roles
 		rolesTag: "BUILT AROUND PEOPLE",
 		rolesTitle: "Different roles. One shared home.",
 		rolesIntro: "A thoughtful space for everyone who helps a building feel like a community.",
@@ -90,7 +85,6 @@ export const messages = {
 		together: "One building. A whole community.",
 		togetherText: "The people, conversations, and little details that make everyday life better.",
 		trackingNote: "Contributions are paid directly to your syndic. SyndiLink helps your building keep a clear record.",
-		// Landing page: FAQ
 		faqTag: "GOOD TO KNOW",
 		faqTitle: "A few things you might be wondering.",
 		faqs: [
@@ -115,7 +109,6 @@ export const messages = {
 				answer: "SyndiLink is being built for English, French, and Arabic, including a right-to-left layout for Arabic. You can already switch the language of this page using the selector above.",
 			},
 		],
-		// Landing page: call to action and footer
 		ctaTag: "BETTER TOGETHER",
 		ctaTitle: "A better-connected building starts here.",
 		ctaText: "Bring your community a little closer. Make everyday building life a little easier.",
@@ -125,16 +118,44 @@ export const messages = {
 		privacyPolicy: "Privacy Policy",
 		termsOfService: "Terms of Service",
 		footerLegalNavigation: "Legal information",
+		explore: {
+			navigation: "Explore Buildings",
+			workspace: "My Workspace",
+			workspacePreview: "Buildings you belong to will appear here once your membership is approved.",
+			notifications: "Notifications",
+			notificationsPreview: "Updates about your membership requests will appear here when notifications are available.",
+			account: "My Account",
+			accountPreview: "Account settings will be available when profiles are connected.",
+			title: "Find your building",
+			intro: "Search for your residence and connect with your community.",
+			searchLabel: "Search buildings",
+			searchPlaceholder: "Building name, ID, city or neighborhood",
+			city: "City",
+			allCities: "All cities",
+			results: "Buildings",
+			resultCount: "{count} buildings",
+			oneResult: "1 building",
+			demo: "Sample listings",
+			buildingId: "Building ID",
+			location: "Location",
+			view: "View Building",
+			request: "Request to Join",
+			requestInfo: "To join, you'll provide your apartment number and say whether you own or rent it. The building manager reviews your request. This preview doesn't send a request.",
+			backToBuilding: "Back to building",
+			empty: "No buildings found",
+			emptyHint: "Try another name or Building ID, or choose a different city.",
+			clear: "Clear filters",
+			create: "Create Building",
+			createPreview: "When building creation is available, you'll be able to add your building and invite its residents. This preview doesn't create a building.",
+		},
 	},
 	fr: {
-		// Shared navigation
 		nav: ["Fonctionnalités", "Comment ça marche", "La communauté", "FAQ"],
 		language: "Langue",
 		signIn: "Connexion",
 		createAccount: "Créer un compte",
 		menu: "Menu de navigation",
 		close: "Fermer",
-		// Landing page: hero
 		eyebrow: "GESTION DES IMMEUBLES RÉSIDENTIELS",
 		title: ["Votre immeuble.", "Mieux connecté."],
 		intro: "Moins de messages à chercher. Plus de moments à partager. Un espace convivial pour que syndics, propriétaires et résidents organisent la vie de leur immeuble.",
@@ -145,7 +166,6 @@ export const messages = {
 		photoLabel: "Un lieu où l'on se sent chez soi",
 		photoCaption: "Une communauté plus unie commence par un lien.",
 		sealLabel: "Mieux ensemble",
-		// Landing page: features
 		featuresTag: "TOUT AU MÊME ENDROIT",
 		featuresTitle: "Moins de gestion. Plus de vie commune.",
 		featuresIntro: "Les essentiels du quotidien pour un immeuble qui fonctionne mieux, ensemble.",
@@ -175,7 +195,6 @@ export const messages = {
 				text: "Retrouvez les informations importantes sans parcourir tout l'historique du groupe.",
 			},
 		],
-		// Landing page: getting started
 		stepsTag: "COMMENT ÇA MARCHE",
 		stepsTitle: "Votre communauté, connectée en trois étapes.",
 		steps: [
@@ -192,7 +211,6 @@ export const messages = {
 				text: "Partagez les nouvelles et organisez le quotidien avec vos voisins.",
 			},
 		],
-		// Landing page: community roles
 		rolesTag: "PENSÉ POUR LES HABITANTS",
 		rolesTitle: "Des rôles différents. Un lieu partagé.",
 		rolesIntro: "Un espace adapté à chaque personne qui fait vivre l'immeuble.",
@@ -217,7 +235,6 @@ export const messages = {
 		together: "Un immeuble. Toute une communauté.",
 		togetherText: "Les personnes, les échanges et les petits détails qui améliorent le quotidien.",
 		trackingNote: "Les cotisations sont versées directement à votre syndic. SyndiLink permet d'en garder une trace claire.",
-		// Landing page: FAQ
 		faqTag: "BON À SAVOIR",
 		faqTitle: "Quelques réponses à vos questions.",
 		faqs: [
@@ -242,7 +259,6 @@ export const messages = {
 				answer: "SyndiLink est conçu pour l'anglais, le français et l'arabe, avec une mise en page de droite à gauche pour l'arabe. Vous pouvez déjà changer la langue de cette page avec le sélecteur.",
 			},
 		],
-		// Landing page: call to action and footer
 		ctaTag: "MIEUX ENSEMBLE",
 		ctaTitle: "Un immeuble mieux connecté commence ici.",
 		ctaText: "Rapprochez votre communauté et simplifiez la vie de votre immeuble.",
@@ -252,16 +268,44 @@ export const messages = {
 		privacyPolicy: "Politique de confidentialité",
 		termsOfService: "Conditions d'utilisation",
 		footerLegalNavigation: "Informations légales",
+		explore: {
+			navigation: "Explorer les immeubles",
+			workspace: "Mon espace",
+			workspacePreview: "Vos immeubles s'afficheront ici une fois votre demande d'adhésion acceptée.",
+			notifications: "Notifications",
+			notificationsPreview: "Vous trouverez ici les mises à jour sur vos demandes d'adhésion lorsque les notifications seront disponibles.",
+			account: "Mon compte",
+			accountPreview: "Les réglages du compte seront disponibles une fois les profils activés.",
+			title: "Trouvez votre immeuble",
+			intro: "Recherchez votre résidence et retrouvez la communauté de votre immeuble.",
+			searchLabel: "Rechercher un immeuble",
+			searchPlaceholder: "Nom, identifiant, ville ou quartier",
+			city: "Ville",
+			allCities: "Toutes les villes",
+			results: "Immeubles",
+			resultCount: "{count} immeubles",
+			oneResult: "1 immeuble",
+			demo: "Annonces de démonstration",
+			buildingId: "Identifiant de l'immeuble",
+			location: "Emplacement",
+			view: "Voir l'immeuble",
+			request: "Demander à rejoindre",
+			requestInfo: "Pour rejoindre l'immeuble, indiquez votre numéro d'appartement et précisez si vous êtes propriétaire ou locataire. Le syndic examine ensuite votre demande. Cet aperçu n'envoie aucune demande.",
+			backToBuilding: "Retour à l'immeuble",
+			empty: "Aucun immeuble trouvé",
+			emptyHint: "Essayez un autre nom ou identifiant, ou sélectionnez une autre ville.",
+			clear: "Réinitialiser les filtres",
+			create: "Créer un immeuble",
+			createPreview: "Lorsque la création sera disponible, vous pourrez ajouter votre immeuble et inviter ses résidents. Cet aperçu ne crée aucun immeuble.",
+		},
 	},
 	ar: {
-		// Shared navigation
 		nav: ["المميزات", "كيف تعمل المنصة", "لمجتمع بنايتك", "أسئلة شائعة"],
 		language: "اللغة",
 		signIn: "تسجيل الدخول",
 		createAccount: "إنشاء حساب",
 		menu: "قائمة التنقل",
 		close: "إغلاق",
-		// Landing page: hero
 		eyebrow: "إدارة البنايات السكنية",
 		title: ["بنايتك.", "مجتمع أكثر ترابطًا."],
 		intro: "وقت أقل في البحث عن الأخبار، وحياة مشتركة أفضل. مساحة تجمع السنديك والملاك والسكان لتنظيم شؤون بنايتهم بكل وضوح.",
@@ -272,7 +316,6 @@ export const messages = {
 		photoLabel: "مكان يجمعنا",
 		photoCaption: "مجتمع أفضل يبدأ بالتواصل.",
 		sealLabel: "أفضل معًا",
-		// Landing page: features
 		featuresTag: "كل ما تحتاجه في مكان واحد",
 		featuresTitle: "إدارة أبسط. مجتمع أقرب.",
 		featuresIntro: "أدوات يومية تساعد سكان البناية على التنظيم والتعاون.",
@@ -302,7 +345,6 @@ export const messages = {
 				text: "اعثر على أخبار البناية المهمة بسهولة، بعيدًا عن ازدحام المحادثات.",
 			},
 		],
-		// Landing page: getting started
 		stepsTag: "كيف تعمل المنصة",
 		stepsTitle: "مجتمع بنايتك مترابط بثلاث خطوات.",
 		steps: [
@@ -319,7 +361,6 @@ export const messages = {
 				text: "تبادلوا الأخبار ونظموا شؤون البناية وابقوا على تواصل.",
 			},
 		],
-		// Landing page: community roles
 		rolesTag: "مصممة حول الناس",
 		rolesTitle: "أدوار مختلفة. مكان يجمعنا.",
 		rolesIntro: "مساحة مناسبة لكل من يساهم في حياة البناية ومجتمعها.",
@@ -344,7 +385,6 @@ export const messages = {
 		together: "بناية واحدة. مجتمع متكامل.",
 		togetherText: "الأشخاص والحوارات والتفاصيل الصغيرة التي تجعل الحياة اليومية أفضل.",
 		trackingNote: "تُدفع المساهمات مباشرة إلى السنديك. تساعد SyndiLink على الاحتفاظ بسجل واضح لها.",
-		// Landing page: FAQ
 		faqTag: "معلومات تهمك",
 		faqTitle: "إجابات عن أسئلتك.",
 		faqs: [
@@ -369,7 +409,6 @@ export const messages = {
 				answer: "تُطوّر SyndiLink بالإنجليزية والفرنسية والعربية، مع تخطيط مناسب من اليمين إلى اليسار للعربية. يمكنك الآن تغيير لغة هذه الصفحة من القائمة في الأعلى.",
 			},
 		],
-		// Landing page: call to action and footer
 		ctaTag: "أفضل معًا",
 		ctaTitle: "مجتمع أكثر ترابطًا يبدأ من هنا.",
 		ctaText: "قرّب سكان بنايتك واجعل إدارة الحياة المشتركة أكثر سهولة.",
@@ -379,6 +418,36 @@ export const messages = {
 		privacyPolicy: "سياسة الخصوصية",
 		termsOfService: "شروط الاستخدام",
 		footerLegalNavigation: "المعلومات القانونية",
+		explore: {
+			navigation: "استكشاف البنايات",
+			workspace: "مساحة عملي",
+			workspacePreview: "ستظهر بناياتك هنا بعد قبول طلبات انضمامك إليها.",
+			notifications: "الإشعارات",
+			notificationsPreview: "ستظهر هنا مستجدات طلبات الانضمام عندما تتوفر الإشعارات.",
+			account: "حسابي",
+			accountPreview: "ستتمكن من تعديل إعدادات حسابك عند تفعيل الملفات الشخصية.",
+			title: "اعثر على بنايتك",
+			intro: "ابحث عن البناية التي تسكن فيها وتواصل مع جيرانك.",
+			searchLabel: "البحث عن بناية",
+			searchPlaceholder: "الاسم أو المعرّف أو المدينة أو الحي",
+			city: "المدينة",
+			allCities: "كل المدن",
+			results: "البنايات",
+			resultCount: "عدد البنايات: {count}",
+			oneResult: "بناية واحدة",
+			demo: "بنايات تجريبية",
+			buildingId: "معرّف البناية",
+			location: "الموقع",
+			view: "عرض البناية",
+			request: "طلب الانضمام",
+			requestInfo: "للانضمام، ستحدد رقم شقتك وما إذا كنت مالكًا أم مكتريًا. يراجع السنديك طلبك بعد ذلك. هذه المعاينة لا ترسل أي طلب.",
+			backToBuilding: "العودة إلى البناية",
+			empty: "لم نجد بنايات مطابقة",
+			emptyHint: "جرّب اسمًا أو معرّفًا آخر، أو اختر مدينة مختلفة.",
+			clear: "إعادة ضبط الفلاتر",
+			create: "إنشاء بناية",
+			createPreview: "عند توفر ميزة الإنشاء، ستتمكن من إضافة بنايتك ودعوة سكانها. هذه المعاينة لا تنشئ أي بناية.",
+		},
 	},
 };
 

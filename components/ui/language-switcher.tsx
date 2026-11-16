@@ -2,14 +2,8 @@
 
 import { Globe2 } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select";
-import { Lang } from "@/lib/langs/messages";
+import { isLang } from "@/lib/langs/messages";
 import { useLanguage } from "@/lib/langs/language-provider";
-
-const languages = ["en", "fr", "ar"] as const;
-
-function isLang(value: string): value is Lang {
-	return languages.some((lang) => lang === value);
-}
 
 export default function LanguageSwitcher() {
 	const { lang, setLang, t } = useLanguage();

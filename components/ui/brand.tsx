@@ -1,10 +1,10 @@
 import { Building2 } from "lucide-react";
 
-export function Brand({ compact = false }: { compact?: boolean }) {
+export function Brand({ compact = false, href = "#home" }: { compact?: boolean; href?: string }) {
 	return (
 		<a
 			className={`flex shrink-0 items-center gap-2 rounded-md text-2xl font-extrabold tracking-tighter focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c47e65] ${compact ? "" : "xl:text-3xl"}`}
-			href="#home"
+			href={href}
 			aria-label="SyndiLink"
 		>
 			<span

@@ -19,8 +19,9 @@ export function LanguageProvider({ lang, children }: { lang: Lang; children: Rea
 		if (nextLang === lang)
 			return;
 
-		const { search, hash } = window.location;
-		router.replace(`/${nextLang}${search}${hash}`, { scroll: false });
+		const { pathname, search, hash } = window.location;
+		const pagePath = pathname.slice(lang.length + 1);
+		router.replace(`/${nextLang}${pagePath}${search}${hash}`, { scroll: false });
 	}
 
 	return <LanguageContext.Provider value={{ lang, setLang, t: messages[lang] }}>{children}</LanguageContext.Provider>;
