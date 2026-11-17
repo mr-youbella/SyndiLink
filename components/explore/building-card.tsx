@@ -35,7 +35,7 @@ export function BuildingCard({ building, lang, t }: { building: MockBuilding; la
 					{copy.buildingId}
 					<span dir="ltr" className="rounded-md bg-[#f0f4ef] px-2 py-1 font-mono font-semibold text-[#245f51]">{building.id}</span>
 				</p>
-				<button type="button" aria-haspopup="dialog" aria-label={`${copy.view} — ${name}`} className="mt-auto flex min-h-11 cursor-pointer items-center justify-between gap-2 rounded-lg border border-[#c4d4c9] px-3 text-start text-sm font-extrabold text-[#245f51] hover:border-[#245f51] hover:bg-[#f0f4ef] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#245f51]">
+				<button type="button" aria-haspopup="dialog" aria-label={`${copy.view} — ${name}`} className="mt-auto flex min-h-11 cursor-pointer items-center justify-between gap-2 rounded-lg border border-[#c4d4c9] px-3 text-start text-sm font-extrabold text-[#245f51] hover:border-[#245f51] transition-all hover:bg-[#f0f4ef] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#245f51]">
 					{copy.view}
 					<ArrowRight aria-hidden="true" className="size-4 shrink-0 rtl:rotate-180" />
 				</button>
