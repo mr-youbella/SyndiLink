@@ -23,14 +23,18 @@ export function BuildingDirectory() {
 		if (city && building.city !== city)
 			return false;
 
-		const fields = [building.id, ...Object.values(building.name), ...Object.values(cities[building.city]), ...Object.values(building.district)];
-		const searchable = searchText(fields.join(" "));
+		const names = Object.values(building.name);
+		const cityNames = Object.values(cities[building.city]);
+		const districts = Object.values(building.district);
 
-		return terms.every((term) => searchable.includes(term));
+		const text = [building.id, ...names, ...cityNames, ...districts].join(" ");
+		const searchable = searchText(text);
+
+		return terms.every((word) => searchable.includes(word));
 	});
 
-	const count = new Intl.NumberFormat(lang === "ar" ? "ar-u-nu-arab" : lang).format(buildings.length);
-	const resultCount = buildings.length === 1 ? copy.oneResult : copy.resultCount.replace("{count}", count);
+	const count = buildings.length;
+	const resultCount = count === 1 ? copy.oneResult : copy.resultCount.replace("{count}", count.toString());
 
 	function clearFilters() {
 		setQuery("");
