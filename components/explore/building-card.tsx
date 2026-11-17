@@ -1,8 +1,6 @@
 import { ArrowRight, Building2, MapPin } from "lucide-react";
-import { useRef, useState } from "react";
 import { cities, type City, type MockBuilding } from "@/lib/explore/mock-buildings";
 import type { Lang, Messages } from "@/lib/langs/messages";
-import { ExploreDialog } from "./explore-dialog";
 
 const coverColors: Record<City, string> = {
 	khouribga: "from-[#dce5dd] to-[#eef2e9] text-[#245f51]",
