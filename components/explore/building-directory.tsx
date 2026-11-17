@@ -5,7 +5,6 @@ import { useState } from "react";
 import { cities, mockBuildings, mockViewer, type City } from "@/lib/explore/mock-buildings";
 import { useLanguage } from "@/lib/langs/language-provider";
 import { BuildingCard } from "./building-card";
-import { ExplorePreviewButton } from "./explore-dialog";
 
 const cityOptions = Object.keys(cities) as City[];
 
@@ -41,8 +40,8 @@ export function BuildingDirectory() {
 
 	return (
 		<>
-			<div role="search" aria-label={copy.searchLabel} className="mt-6 grid gap-4 rounded-2xl border border-[#dce5dd] bg-white p-4 shadow-sm sm:grid-cols-[minmax(0,1fr)_minmax(12rem,1fr)] sm:p-5 lg:grid-cols-[minmax(0,1fr)_16rem]">
-				<div className="min-w-0">
+			<div role="search" aria-label={copy.searchLabel} className="mt-6 grid gap-4 rounded-2xl border border-[#dce5dd] bg-white p-4 shadow-sm sm:grid-cols-3 sm:p-5">
+				<div className="sm:col-span-2">
 					<label htmlFor="building-query" className="mb-2 block text-sm font-extrabold text-[#183d35]">{copy.searchLabel}</label>
 					<div className="relative">
 						<Search aria-hidden="true" className="pointer-events-none absolute inset-s-3 top-1/2 size-5 -translate-y-1/2 text-[#5b6961]" />
@@ -90,7 +89,9 @@ export function BuildingDirectory() {
 						<div className="mt-5 flex flex-wrap justify-center gap-3">
 							<button type="button" onClick={clearFilters} className="min-h-11 cursor-pointer rounded-lg border border-[#7b8c81] px-4 py-2 text-sm font-extrabold text-[#245f51] hover:bg-[#f0f4ef] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#245f51]">{copy.clear}</button>
 							{mockViewer.canCreateBuilding && (
-								<ExplorePreviewButton label={copy.create} description={copy.createPreview} closeLabel={t.close} className="min-h-11 cursor-pointer rounded-lg bg-[#183d35] px-4 py-2 text-sm font-extrabold text-white hover:bg-[#245f51] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#245f51]" />
+								<button type="button" aria-label={copy.create} aria-haspopup="dialog" className="min-h-11 cursor-pointer rounded-lg bg-[#183d35] px-4 py-2 text-sm font-extrabold text-white hover:bg-[#245f51] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#245f51]">
+									{copy.create}
+								</button>
 							)}
 						</div>
 					</div>
