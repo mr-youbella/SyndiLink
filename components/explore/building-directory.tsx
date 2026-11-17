@@ -5,6 +5,7 @@ import { useState } from "react";
 import { cities, mockBuildings, mockViewer, type City } from "@/lib/explore/mock-buildings";
 import { useLanguage } from "@/lib/langs/language-provider";
 import { BuildingCard } from "./building-card";
+import { BuildingCitySelect } from "./building-city-select";
 
 const cityOptions = Object.keys(cities) as City[];
 
@@ -53,17 +54,7 @@ export function BuildingDirectory() {
 					</div>
 				</div>
 
-				<div>
-					<label htmlFor="building-city" className="mb-2 block text-sm font-extrabold text-[#183d35]">{copy.city}</label>
-					<div className="relative">
-						<MapPin aria-hidden="true" className="pointer-events-none absolute inset-s-3 top-1/2 size-5 -translate-y-1/2 text-[#5b6961]" />
-						<select id="building-city" value={city} onChange={(event) => setCity(event.target.value)} className="h-12 w-full cursor-pointer appearance-none rounded-xl border border-[#7b8c81] bg-[#f7f8f4] pe-9 ps-10 text-base text-[#183d35] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#245f51] sm:text-sm">
-							<option value="">{copy.allCities}</option>
-							{cityOptions.map((value) => <option value={value} key={value}>{cities[value][lang]}</option>)}
-						</select>
-						<ChevronDown aria-hidden="true" className="pointer-events-none absolute inset-e-3 top-1/2 size-4 -translate-y-1/2 text-[#245f51]" />
-					</div>
-				</div>
+				<BuildingCitySelect city={city} setCity={setCity} lang={lang} label={copy.city} allCities={copy.allCities} />
 			</div>
 
 			<section className="mt-8" aria-labelledby="building-results">
@@ -72,7 +63,6 @@ export function BuildingDirectory() {
 						<h2 id="building-results" className="text-2xl font-extrabold text-[#183d35]">{copy.results}</h2>
 						<p role="status" className="mt-1 text-sm text-[#5b6961]">{resultCount}</p>
 					</div>
-					<p className="rounded-full bg-[#e8efe7] px-3 py-1 text-xs font-bold text-[#183d35]">{copy.demo}</p>
 				</div>
 
 				{buildings.length > 0 ? (
