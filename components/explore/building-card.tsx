@@ -1,4 +1,5 @@
 import { ArrowRight, Building2, MapPin } from "lucide-react";
+import Image from "next/image";
 import { cities, type City, type MockBuilding } from "@/lib/explore/mock-buildings";
 import type { Lang, Messages } from "@/lib/langs/messages";
 
@@ -16,11 +17,17 @@ export function BuildingCard({ building, lang, t }: { building: MockBuilding; la
 	return (
 		<article className="flex h-full flex-col overflow-hidden rounded-2xl border border-[#dce5dd] bg-white shadow-sm transition-shadow hover:shadow-md motion-reduce:transition-none">
 			<div aria-hidden="true" className={`relative grid h-36 place-items-center overflow-hidden bg-linear-to-br ${coverColors[building.city]}`}>
-				<div className="absolute size-56 rounded-full border border-current opacity-10" />
-				<div className="absolute size-40 rounded-full border border-current opacity-15" />
-				<div className="grid size-23 place-items-center rounded-3xl border border-white bg-white/45 shadow-sm">
-					<Building2 className="size-13" strokeWidth={1.25} />
-				</div>
+				{building.image ? (
+					<Image src={building.image} alt="Building Image" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
+				) : (
+					<>
+						<div className="absolute size-56 rounded-full border border-current opacity-10" />
+						<div className="absolute size-40 rounded-full border border-current opacity-15" />
+						<div className="grid size-23 place-items-center rounded-3xl border border-white bg-white/45 shadow-sm">
+							<Building2 className="size-13" strokeWidth={1.25} />
+						</div>
+					</>
+				)}
 			</div>
 
 			<div className="flex flex-1 flex-col p-5">

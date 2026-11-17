@@ -15,6 +15,7 @@ export type MockBuilding = {
 	name: LocalizedName;
 	city: City;
 	district: LocalizedName;
+	image?: string;
 };
 
 export const mockBuildings: MockBuilding[] = [
@@ -23,6 +24,7 @@ export const mockBuildings: MockBuilding[] = [
 		name: { en: "Les Oliviers Residence", fr: "Résidence Les Oliviers", ar: "إقامة الزيتون" },
 		city: "khouribga",
 		district: { en: "Hay Al Qods", fr: "Hay Al Qods", ar: "حي القدس" },
+		image: "/images/residential-hero.webp",
 	},
 	{
 		id: "SL-CAS-002",
