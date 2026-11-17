@@ -1,13 +1,11 @@
 "use client";
 
-import { ChevronDown, MapPin, Search, SearchX } from "lucide-react";
+import { Search, SearchX } from "lucide-react";
 import { useState } from "react";
-import { cities, mockBuildings, mockViewer, type City } from "@/lib/explore/mock-buildings";
+import { cities, mockBuildings, mockViewer } from "@/lib/explore/mock-buildings";
 import { useLanguage } from "@/lib/langs/language-provider";
 import { BuildingCard } from "./building-card";
 import { BuildingCitySelect } from "./building-city-select";
-
-const cityOptions = Object.keys(cities) as City[];
 
 function searchText(text: string) {
 	return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f\u064b-\u065f]/g, "").replace(/[^a-z0-9\u0621-\u064a]/g, " ");
